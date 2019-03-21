@@ -1,0 +1,69 @@
+AllCops:
+  TargetRubyVersion: 2.5
+  Exclude:
+    - 'bin/*'
+
+Metrics/BlockLength:
+  Enabled: false
+
+Metrics/LineLength:
+  Max: 120
+
+Metrics/MethodLength:
+  Max: 40
+
+Metrics/AbcSize:
+  Max: 50
+
+Metrics/ModuleLength:
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Style/StringLiterals:
+  Enabled: false
+
+Documentation:
+  Enabled: false
+
+Metrics/ClassLength:
+  Enabled: false
+
+Style/Semicolon:
+  Enabled: false
+
+Lint/AmbiguousBlockAssociation:
+  Enabled: false
+Style/SafeNavigation:
+  Enabled: false
+
+Metrics/CyclomaticComplexity:
+  Max: 10
+
+Metrics/PerceivedComplexity:
+  Max: 12
+
+Naming/MemoizedInstanceVariableName:
+  Enabled: false
+
+Naming/VariableNumber:
+  Enabled: false
+
+Lint/ParenthesesAsGroupedExpression:
+  Enabled: false
+
+Style/AsciiComments:
+  Enabled: false
+
+Layout/EmptyLineAfterGuardClause:
+  Enabled: false
+
+Metrics/ParameterLists:
+  Enabled: false
+
+Style/DateTime:
+  Enabled: false
+
+Style/OptionalArguments:
+  Enabled: false
