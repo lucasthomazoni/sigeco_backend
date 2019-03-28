@@ -1,11 +1,17 @@
-# frozen_string_literal: true
-
-class User
+class Usuario
   include Mongoid::Document
   include Mongoid::Timestamps
   include Mongoid::Locker
 
+  extend EnumerateIt
+
+  field :nome, type: String
+  field :sobrenome, type: String
+  field :ativo, type: Boolean
   field :siape, type: String
+  field :funcao, type: String
+
+  has_enumeration_for :funcao, with: TipoFuncao, create_helpers: true
 
   field :locker_locked_at, type: Time
   field :locker_locked_until, type: Time
@@ -56,5 +62,5 @@ class User
   index({ uid: 1, provider: 1}, { name: 'uid_provider_index', unique: true, background: true })
   # index({ unlock_token: 1 }, { name: 'unlock_token_index', unique: true, sparse: true, background: true })
 
-  validates :siape, presence: true
+  validates :funcao, presence: true
 end
